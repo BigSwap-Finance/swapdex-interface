@@ -399,19 +399,7 @@
             "quote": "usdc"
         },
         {
-            "base": "clo",
-            "quote": "usdc"
-        },
-        {
-            "base": "clog",
-            "quote": "usdc"
-        },
-        {
             "base": "0xbtc",
-            "quote": "usdc"
-        },
-        {
-            "base": "dca",
             "quote": "usdc"
         },
         {
@@ -442,27 +430,11 @@
             "base": "link",
             "quote": "usdt"
         },
-	{
-            "base": "idrt",
-            "quote": "usdt"
-        },
-        {
-            "base": "clo",
-            "quote": "usdt"
-        },
-        {
-            "base": "clog",
-            "quote": "usdt"
-        },
         {
             "base": "0xbtc",
             "quote": "usdt"
         },        
-	{
-            "base": "dca",
-            "quote": "usdt"
-        },
-    {
+        {
             "base": "befx",
             "quote": "usdt"
         }
