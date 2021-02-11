@@ -450,13 +450,5 @@
             "text": "ETH",
             "value": "weth"
         },
-        {
-            "text": "USDT",
-            "value": "usdt"
-        },
-        {
-            "text": "USDC",
-            "value": "usdc"
-        }
     ]
 }
