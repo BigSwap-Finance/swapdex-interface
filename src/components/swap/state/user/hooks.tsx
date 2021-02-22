@@ -88,10 +88,10 @@ export function useUserSlippageTolerance(): [number, (slippage: number) => void]
 
 export function useUserDeadline(): [number, (slippage: number) => void] {
   const dispatch = useDispatch<AppDispatch>()
-  // const userDeadline = useSelector<AppState, AppState['user']['userDeadline']>(state => {
-  //   return state.user.userDeadline
-  // })
-  //
+  const userDeadline = useSelector<AppState, AppState['user']['userDeadline']>(state => {
+    return state.user.userDeadline
+  })
+  
   const setUserDeadline = useCallback(
     (userDeadline: number) => {
       dispatch(updateUserDeadline({ userDeadline }))
@@ -99,8 +99,8 @@ export function useUserDeadline(): [number, (slippage: number) => void] {
     [dispatch]
   )
 
-  // return [userDeadline, setUserDeadline]
-  return [1, setUserDeadline]
+  return [userDeadline, setUserDeadline]
+  // return [1, setUserDeadline]
 }
 
 export function useAddUserToken(): (token: Token) => void {
