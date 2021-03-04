@@ -56,7 +56,7 @@ export default class TVChartContainer extends React.PureComponent<Partial<ChartC
         chartsStorageUrl: 'https://saveload.tradingview.com',
         chartsStorageApiVersion: '1.1',
         clientId: 'tradingview.com',
-        userId: 'veridex',
+        userId: 'Swapdex',
         fullscreen: false,
         autosize: true,
         studiesOverrides: {},
