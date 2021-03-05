@@ -8,6 +8,7 @@ import {
     LAUNCHPAD_APP_BASE_PATH,
     MARGIN_APP_BASE_PATH,
     MARKET_APP_BASE_PATH,
+    POOL_APP_BASE_PATH
 } from '../../common/constants';
 import { CollectibleFilterType } from '../../util/filterable_collectibles';
 import { CollectibleSortType } from '../../util/sortable_collectibles';
@@ -23,7 +24,8 @@ export const goToHome: ThunkCreator = () => {
             currentRoute.includes(MARGIN_APP_BASE_PATH) ||
             currentRoute.includes(DEFI_APP_BASE_PATH) ||
             currentRoute.includes(LAUNCHPAD_APP_BASE_PATH) ||
-            currentRoute.includes(MARKET_APP_BASE_PATH);
+            currentRoute.includes(MARKET_APP_BASE_PATH) ||
+            currentRoute.includes(POOL_APP_BASE_PATH);
         isRoutes ? dispatch(goToHomeErc20()) : dispatch(goToHomeErc721());
     };
 };
@@ -220,7 +222,7 @@ export const setCollectiblesListSortType = (sortType: CollectibleSortType | null
         };
 
         if (sortType === null) {
-            searchObject.sort=null;
+            searchObject.sort = null;
         }
 
         dispatch(
