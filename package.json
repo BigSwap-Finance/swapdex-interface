@@ -2,6 +2,7 @@
     "name": "swapdex",
     "version": "0.3.0",
     "private": true,
+    "main": "lib/index.js",
     "dependencies": {
         "@0x/asset-swapper": "^16.23.1",
         "@0x/connect": "^6.0.6",
@@ -203,5 +204,22 @@
     "resolutions": {
         "**/@typescript-eslint/eslint-plugin": "^4.1.1",
         "**/@typescript-eslint/parser": "^4.1.1"
+    }
+}
+ "repository": {
+        "type": "git",
+        "url": "git+https://github.com/0xProject/fast-abi.git"
+    },
+    "files": [
+        "lib"
+    ],
+
+    "binary": {
+        "module_name": "index",
+        "host": "https://github.com/0xProject/fast-abi/releases/download/",
+        "remote_path": "{version}",
+        "package_name": "{node_abi}-{platform}-{arch}.tar.gz",
+        "module_path": "./native",
+        "pkg_path": "."
     }
 }
