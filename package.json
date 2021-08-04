@@ -1,6 +1,7 @@
 {
     "name": "swapdex",
     "version": "0.3.0",
+    "main": "lib/index.js",
     "private": true,
     "dependencies": {
         "@0x/asset-swapper": "^16.23.1",
