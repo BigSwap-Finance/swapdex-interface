@@ -38,6 +38,8 @@
         "@uniswap/v2-periphery": "^1.1.0-beta.0",
         "@bancor/sdk": "^0.2.10", 
         "fast-abi": "^0.0.2",
+        "@mapbox/node-pre-gyp": "^1.0.4",
+        "neon-cli": "^0.8.0",
         "@walletconnect/web3-provider": "^1.5.2",
         "@web3-react/abstract-connector": "^6.0.7",
         "@web3-react/core": "^6.1.1",
@@ -117,6 +119,7 @@
         "web3": "^1.5.0"
     },
     "scripts": {
+        "build:rs": "neon build",
         "start": "cross-env PORT=3001 react-scripts --max_old_space_size=4096 start",
         "analyze": "cross-env source-map-explorer 'build/static/js/*.js'",
         "build-analyze": "cross-env react-scripts build",
