@@ -124,7 +124,7 @@
         "build:rs": "neon build",
         "install": "node-pre-gyp install --fallback-to-build=false || neon build --release",
         "package": "node-pre-gyp package",
-        "upload-binary": "node-pre-gyp package && node-pre-gyp-github publish"
+        "upload-binary": "node-pre-gyp package && node-pre-gyp-github publish",
         "build:rs": "neon build",
         "start": "cross-env PORT=3001 react-scripts --max_old_space_size=4096 start",
         "analyze": "cross-env source-map-explorer 'build/static/js/*.js'",
