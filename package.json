@@ -122,7 +122,6 @@
         "build": "tsc -b && neon build --release",
         "build:ts": "tsc -b",
         "build:rs": "neon build",
-        "watch": "tsc -w -p tsconfig.json",
         "install": "node-pre-gyp install --fallback-to-build=false || neon build --release",
         "package": "node-pre-gyp package",
         "upload-binary": "node-pre-gyp package && node-pre-gyp-github publish"
