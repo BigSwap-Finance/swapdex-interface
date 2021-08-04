@@ -22,7 +22,6 @@ import {
 
 // tslint:disable-next-line
 uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
-const uuidv4 = require('uuid/v4');
 const logger = getLogger('Services::Relayer');
 export class Relayer {
     private readonly _client: HttpClient;
