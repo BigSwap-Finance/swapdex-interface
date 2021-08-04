@@ -3,6 +3,7 @@ import { assetDataUtils } from '@0x/order-utils';
 import { Orderbook } from '@0x/orderbook';
 import { AssetProxyId } from '@0x/types';
 import { BigNumber } from '@0x/utils';
+import { v4 as uuidv4 } from 'uuid';
 import { RateLimit } from 'async-sema';
 
 import { RELAYER_RPS, RELAYER_URL, RELAYER_WS_URL } from '../common/constants';
@@ -20,7 +21,8 @@ import {
 } from '../util/types';
 
 // tslint:disable-next-line
-const uuidv1 = require('uuid/v1');
+uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+const uuidv4 = require('uuid/v4');
 const logger = getLogger('Services::Relayer');
 export class Relayer {
     private readonly _client: HttpClient;
