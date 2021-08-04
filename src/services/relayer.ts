@@ -371,7 +371,7 @@ export const getWebsocketRelayerConnection = () => {
 
 export const startWebsocketMarketsSubscription = (cb_onmessage: any): WebSocket => {
     const socket = getWebsocketRelayerConnection();
-    const uuid = uuidv1();
+    const uuid = uuidv4();
     const requestAll = {
         type: 'SUBSCRIBE',
         topic: 'BOOK',
