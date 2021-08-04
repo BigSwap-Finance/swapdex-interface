@@ -147,7 +147,6 @@
     "devDependencies": {
         "@0x/tslint-config": "^4.0.0",
         "@0x/types": "^3.0.0",
-        "@types/async-retry": "^1.4.1",
         "@types/enzyme": "^3.1.15",
         "@types/enzyme-adapter-react-16": "^1.0.3",
         "@types/jest": "24",
