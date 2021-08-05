@@ -121,9 +121,7 @@
     },
     "scripts": {
         "build": "tsc -b",
-        "build:rs": "neon build",
         "install": "node-pre-gyp install --fallback-to-build=false || neon build --release",
-        "upload-binary": "node-pre-gyp package && node-pre-gyp-github publish",
         "start": "cross-env PORT=3001 react-scripts --max_old_space_size=4096 start",
         "analyze": "cross-env source-map-explorer 'build/static/js/*.js'",
         "build-analyze": "cross-env react-scripts build",
