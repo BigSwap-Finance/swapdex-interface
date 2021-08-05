@@ -19,7 +19,6 @@
         "@portis/web3": "2.0.0-beta.54",
         "@reach/dialog": "^0.12.1",
         "@reduxjs/toolkit": "^1.5.0",
-        "@toruslabs/fetch-node-details": "^2.7.0",
         "@toruslabs/torus-embed": "1.12.1",
         "@types/async-retry": "^1.4.1",
         "@types/react-collapse": "^4.0.2",
