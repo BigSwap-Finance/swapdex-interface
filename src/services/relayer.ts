@@ -20,6 +20,7 @@ import {
 } from '../util/types';
 
 // tslint:disable-next-line
+const uuidv1 = require('uuid/v1');
 const logger = getLogger('Services::Relayer');
 export class Relayer {
     private readonly _client: HttpClient;
@@ -369,7 +370,7 @@ export const getWebsocketRelayerConnection = () => {
 
 export const startWebsocketMarketsSubscription = (cb_onmessage: any): WebSocket => {
     const socket = getWebsocketRelayerConnection();
-    const uuid = uuidv4();
+    const uuid = uuidv1();
     const requestAll = {
         type: 'SUBSCRIBE',
         topic: 'BOOK',
