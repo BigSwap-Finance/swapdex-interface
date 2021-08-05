@@ -22,6 +22,5 @@
     "declarationMap": true,
     "sourceMap": true
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./native/**/*"]    
+  "include": ["./src/**/*"]
 }
