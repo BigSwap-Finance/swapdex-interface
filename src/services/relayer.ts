@@ -20,7 +20,8 @@ import {
 } from '../util/types';
 
 // tslint:disable-next-line
-const uuidv1 = require('uuid/v1');
+const { v3: uuidv3 } = require('uuid');
+uuidv3();
 const logger = getLogger('Services::Relayer');
 export class Relayer {
     private readonly _client: HttpClient;
