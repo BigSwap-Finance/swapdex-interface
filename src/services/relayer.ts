@@ -4,7 +4,7 @@ import { Orderbook } from '@0x/orderbook';
 import { AssetProxyId } from '@0x/types';
 import { BigNumber } from '@0x/utils';
 import { RateLimit } from 'async-sema';
-import { NIL as NIL_UUID } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 import { RELAYER_RPS, RELAYER_URL, RELAYER_WS_URL } from '../common/constants';
 import { getAvailableMarkets } from '../common/markets';
@@ -21,7 +21,7 @@ import {
 } from '../util/types';
 
 // tslint:disable-next-line
-NIL_UUID; // ⇨ '00000000-0000-0000-0000-000000000000'
+uuidv4();
 const logger = getLogger('Services::Relayer');
 export class Relayer {
     private readonly _client: HttpClient;
