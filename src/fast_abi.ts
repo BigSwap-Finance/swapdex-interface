@@ -1,8 +1,7 @@
 import { DataItem, MethodAbi } from 'ethereum-types';
 import { BigNumber } from 'bignumber.js';
-import { native } from './native';
 
-const { Coder } = require('./native');
+const { Coder } = require('./src/native');
 
 interface Opts {
     BigNumber: any;
