@@ -120,11 +120,10 @@
         "web3": "^1.5.0"
     },
     "scripts": {
-         "build": "tsc -b && neon build --release",
+        "build": "tsc -b && neon build --release",
         "build:ts": "tsc -b",
         "build:rs": "neon build",
         "watch": "tsc -w -p tsconfig.json",
-        "install": "node-pre-gyp install --fallback-to-build=false || neon build --release",
         "package": "node-pre-gyp package",
         "upload-binary": "node-pre-gyp package && node-pre-gyp-github publish",
         "start": "cross-env PORT=3001 react-scripts --max_old_space_size=4096 start",
@@ -204,10 +203,7 @@
     "resolutions": {
         "**/@typescript-eslint/eslint-plugin": "^4.1.1",
         "**/@typescript-eslint/parser": "^4.1.1"
-  },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/0xProject/fast-abi.git"
+ 
     },
     "files": [
         "lib"
