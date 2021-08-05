@@ -3,8 +3,8 @@ import { assetDataUtils } from '@0x/order-utils';
 import { Orderbook } from '@0x/orderbook';
 import { AssetProxyId } from '@0x/types';
 import { BigNumber } from '@0x/utils';
-import { v4 as uuidv4 } from 'uuid';
 import { RateLimit } from 'async-sema';
+import { empty } from 'uuidv4';
 
 import { RELAYER_RPS, RELAYER_URL, RELAYER_WS_URL } from '../common/constants';
 import { getAvailableMarkets } from '../common/markets';
@@ -21,7 +21,8 @@ import {
 } from '../util/types';
 
 // tslint:disable-next-line
-uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+console.log(empty());
+// => '00000000-0000-0000-0000-000000000000'
 const logger = getLogger('Services::Relayer');
 export class Relayer {
     private readonly _client: HttpClient;
