@@ -1,6 +1,7 @@
 {
     "name": "swapdex",
     "version": "0.3.0",
+    "main": "lib/index.js",
     "private": true,
     "dependencies": {
         "@0x/asset-swapper": "^16.23.1",
@@ -37,7 +38,7 @@
         "@uniswap/token-lists": "^1.0.0-beta.19",
         "@uniswap/v2-periphery": "^1.1.0-beta.0",
         "@bancor/sdk": "^0.2.10", 
-        "fast-abi": "^0.0.2",
+        "@fast-abi": "^0.0.2",
         "@mapbox/node-pre-gyp": "^1.0.4",
         "neon-cli": "^0.8.0",
         "@walletconnect/web3-provider": "^1.5.2",
@@ -196,5 +197,20 @@
     "resolutions": {
         "**/@typescript-eslint/eslint-plugin": "^4.1.1",
         "**/@typescript-eslint/parser": "^4.1.1"
+  },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/0xProject/fast-abi.git"
+    },
+    "files": [
+        "lib"
+    ],
+    "binary": {
+        "module_name": "index",
+        "host": "https://github.com/0xProject/fast-abi/releases/download/",
+        "remote_path": "{version}",
+        "package_name": "{node_abi}-{platform}-{arch}.tar.gz",
+        "module_path": "./native",
+        "pkg_path": "."
     }
 }
