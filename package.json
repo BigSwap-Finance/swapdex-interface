@@ -197,16 +197,4 @@
         "**/@typescript-eslint/eslint-plugin": "^4.1.1",
         "**/@typescript-eslint/parser": "^4.1.1"
     }
-},
-
- "repository": {
-        "type": "git",
-        "url": "git+https://github.com/0xProject/fast-abi.git"
-    },
-    "files": [
-        "lib"
-    ],
-    "binary": {
-        "module_name": "index",
-        "module_path": "./native"
-    }
+}
