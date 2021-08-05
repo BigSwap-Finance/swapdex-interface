@@ -1,7 +1,6 @@
 {
     "name": "swapdex",
     "version": "0.3.0",
-    "main": "lib/index.js",
     "private": true,
     "dependencies": {
         "@0x/asset-swapper": "^16.23.1",
@@ -120,12 +119,6 @@
         "web3": "^1.5.0"
     },
     "scripts": {
-        "build": "tsc -b && neon build --release",
-        "build:ts": "tsc -b",
-        "build:rs": "neon build",
-        "watch": "tsc -w -p tsconfig.json",
-        "package": "node-pre-gyp package",
-        "upload-binary": "node-pre-gyp package && node-pre-gyp-github publish",
         "start": "cross-env PORT=3001 react-scripts --max_old_space_size=4096 start",
         "analyze": "cross-env source-map-explorer 'build/static/js/*.js'",
         "build-analyze": "cross-env react-scripts build",
