@@ -19,7 +19,8 @@
         "@portis/web3": "2.0.0-beta.54",
         "@reach/dialog": "^0.12.1",
         "@reduxjs/toolkit": "^1.5.0",
-        "@toruslabs/torus-embed": "1.0.0",
+        "@toruslabs/fetch-node-details": "^2.7.0",
+        "@toruslabs/torus-embed": "1.12.1",
         "@types/async-retry": "^1.4.1",
         "@types/react-collapse": "^4.0.2",
         "@types/react-color": "^3.0.1",
@@ -115,7 +116,7 @@
         "styled-components": "^5.0.0",
         "typesafe-actions": "^3.0.0",
         "utility-types": "^3.8.0",
-        "uuid": "^3.3.3",
+        "uuid": "^8.3.4",
         "web3": "^1.5.0"
     },
     "scripts": {
