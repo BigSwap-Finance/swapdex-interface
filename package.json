@@ -204,7 +204,6 @@
     },
 
     "binary": {
-        "host": "https://github.com/0xProject/fast-abi/releases/download/",
         "module_path": "./native"
     }
 }
