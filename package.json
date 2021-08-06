@@ -1,7 +1,6 @@
 {
     "name": "swapdex",
     "version": "0.3.0",
-    "main": "index.js",
     "private": true,
     "dependencies": {
         "@0x/asset-swapper": "^16.23.1",
@@ -133,14 +132,11 @@
         "prettier-check": "cross-env prettier --check '**/*.{ts,tsx,json,md}' --ignore-path .gitignore",
         "coveralls": "cat ./coverage/lcov.info | coveralls"
     },
-    "bin": {
-    "node": "bin/node.exe"
-  },
-    
     "eslintConfig": {
     "extends": "react-app",
     "ignorePatterns": [
       "node_modules"
+      ]
     },
     "jest": {
         "collectCoverageFrom": [
