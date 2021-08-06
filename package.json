@@ -47,6 +47,7 @@
         "@web3-react/walletlink-connector": "^6.2.3",
         "ajv": "^6.12.3",
         "apollo-boost": "^0.4.7",
+        "node": "^16.6.1",
         "async-retry": "^1.2.3",
         "async-sema": "^3.0.0",
         "bowser": "^2.7.0",
