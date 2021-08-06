@@ -121,6 +121,8 @@
         "web3": "^1.5.1"
     },
     "scripts": {
+        "dev": "BROWSER=none react-scripts start",
+        "build": "react-scripts build",           
         "start": "cross-env PORT=3001 react-scripts --max_old_space_size=4096 start",
         "analyze": "cross-env source-map-explorer 'build/static/js/*.js'",
         "build-analyze": "cross-env react-scripts build",
