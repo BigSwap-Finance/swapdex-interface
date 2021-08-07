@@ -158,7 +158,6 @@
     "devDependencies": {
         "@0x/tslint-config": "^4.1.4",
         "@0x/types": "^3.3.3",
-        "@types/async-retry": "^1.4.1",
         "@types/enzyme": "^3.10.9",
         "@types/enzyme-adapter-react-16": "^1.0.3",
         "@types/jest": "24",
@@ -174,7 +173,6 @@
         "@types/react-timeago": "^4.1.0",
         "@types/redux-mock-store": "^1.0.0",
         "@types/styled-components": "^5.0.0",
-        "@types/recharts": "^1.1.16",
         "coveralls": "^3.1.1",
         "cross-env": "^7.0.3",
         "dotenv": "^10.0.0",
