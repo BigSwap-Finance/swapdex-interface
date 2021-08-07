@@ -10,8 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <!-- Meta -->
     <title>BigSwap Finance</title>
@@ -101,8 +100,6 @@
         const title = `${dexName} — ERC20 trading, swap, defi, fiat-onramp and market maker tools`;
         const description = `${dexName} is an open-source decentralized ERC20  trading, swap, wallet, defi ready, and launchpad platform with market maker tools and integrated fiat-onramp. Easy onboarding for new users and no KYC required.`;
         document.title = title
-        document.querySelector('meta[name="title"]').setAttribute("content", title);
-        document.querySelector('meta[name="description"]').setAttribute("content", description);
         document.querySelector('meta[name="twitter:url"]').setAttribute("content", url);
         document.querySelector('meta[name="twitter:title"]').setAttribute("content", title);
         document.querySelector('meta[name="twitter:image"]').setAttribute("content", image);
