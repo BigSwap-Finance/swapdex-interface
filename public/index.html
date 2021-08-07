@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BigSwapDex | ERC20 trading, swap, defi, fiat-onramp and market maker tools</title>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicons/favicon-72.png" />
-    <!--[if IE]>
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicons/favicon.ico"/>
-    <![endif]-->
-    <link rel="apple-touch-icon-precomposed" href="%PUBLIC_URL%/favicons/favicon-152.png"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF"/>
-    <meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicons/favicon-144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="%PUBLIC_URL%/favicons/favicon-152.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="%PUBLIC_URL%/favicons/favicon-144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="%PUBLIC_URL%/favicons/favicon-120.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="%PUBLIC_URL%/favicons/favicon-114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="%PUBLIC_URL%/favicons/favicon-72.png"/>
-    <link rel="apple-touch-icon-precomposed" href="%PUBLIC_URL%/favicons/favicon-57.png"/>
+    <meta charset="utf-8" />
+    <!-- Links -->
+    <link rel="preconnect" href="%REACT_APP_NODE_1%" />
+    <link rel="preconnect" href="%REACT_APP_NODE_2%" />
+    <link rel="preconnect" href="%REACT_APP_NODE_3%" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Meta -->
+    <title>BigSwap Finance</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
+      name="description"
+      content="Cheaper and faster than Uniswap? Discover ZCore Finance, the leading DEX on Binance Smart Chain (BSC) with the best farms in DeFi and a lottery for ZEFI."
     />
-    <meta name="theme-color" content="#000000">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1" />
+    <meta name="theme-color" content="#000000" />  
+ 
     <meta name="fortmatic-site-verification" content="ww68W6VjqmanwxFA" />
-      <!-- Primary Meta Tags -->
-    <title>SwapDex — ERC20 trading, swap, fiat-onramp, defi and market maker tools</title>
-    <meta name="title" content="SwapDex — ERC20 trading, swap, defi, fiat-onramp and market maker tools">
-    <meta name="description" content="SwapDex is an open-source decentralized ERC20  trading, swap, wallet, defi ready, and launchpad platform with market maker tools and integrated fiat-onramp. Easy onboarding for new users and no KYC required.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://swapdex.net/">
-    <meta property="og:title" content="SwapDex — ERC20 trading, swap, defi, fiat-onramp and market maker tools">
-    <meta property="og:description" content="SwapDex is an open-source decentralized ERC20  trading, swap, wallet, defi ready, and launchpad platform with market maker tools and integrated fiat-onramp. Easy onboarding for new users and no KYC required.">
-    <meta property="og:image" content="https://app.swapdex.net/assets/swapdex.png">
-    <meta property="fb:app_id" content="2358774107692244" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://swapdex.net/">
-    <meta property="twitter:title" content="SwapDex — ERC20 trading, swap, defi, fiat-onramp and market maker tools">
-    <meta property="twitter:description" content="SwapDex is an open-source decentralized ERC20  trading, swap, wallet, defi ready, and launchpad platform with market maker tools and integrated fiat-onramp. Easy onboarding for new users and no KYC required.">
-    <meta property="twitter:image" content="https://app.swapdex.net/assets/swapdex.png">
-
-    <meta name="keywords" content="dex,decentralized exchange,erc20,cryptocurrency trading,0xproject,ethereum,altcoins,lending,funding,margin,loans,macfee,switch">
     
-    <script src="charting_library/datafeeds/udf/dist/polyfills.js"></script>
-    <script src="datafeeds/udf/dist/bundle.js"></script>
-  <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-8425903251487932",
-              enable_page_level_ads: true
-        });
-    </script>  -->
+    <!-- Open Graph / Facebook -->
+    <meta name="facebook:url" content="https://swapdex.net/" />
+    <meta name="facebook:title" content="SwapDex — ERC20 trading, swap, defi, fiat-onramp and market maker tools" />
+    <meta name="facebook:description" content="SwapDex is an open-source decentralized ERC20  trading, swap, wallet, defi ready, and launchpad platform with market maker tools and integrated fiat-onramp. Easy onboarding for new users and no KYC required." />
+    <meta name="facebook:image" content="https://app.swapdex.net/assets/swapdex.png" />
+    <meta name="fb:app_id" content="2358774107692244" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://swapdex.net/" />
+    <meta name="twitter:title" content="SwapDex — ERC20 trading, swap, defi, fiat-onramp and market maker tools" />
+    <meta name="twitter:description" content="SwapDex is an open-source decentralized ERC20  trading, swap, wallet, defi ready, and launchpad platform with market maker tools and integrated fiat-onramp. Easy onboarding for new users and no KYC required." />
+    <meta name="twitter:image" content="https://app.swapdex.net/assets/swapdex.png" /> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    
+<script src="charting_library/datafeeds/udf/dist/polyfills.js"></script>
+<script src="datafeeds/udf/dist/bundle.js"></script>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR6ZLW42N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-CR6ZLW42N9');
+</script>    
 
-    <style type="text/css">
+<style type="text/css">
       .swapdex-loader {
         background-image:url("assets/img/logo.png");
         background-size:contain;
@@ -90,16 +83,10 @@
     </style>
   </head>
   <body>
-
-
-
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-        <div class="black-overlay">
-        </div>
-    </div>
+    <div id="root"></div>
   </body>
-  <script id="dexWizard">
+ <script id="dexWizard" />
     // run to costumize tags
       if (
         window.location.hostname === "localhost" ||
@@ -122,15 +109,15 @@
         document.title = title
         document.querySelector('meta[name="title"]').setAttribute("content", title);
         document.querySelector('meta[name="description"]').setAttribute("content", description);
-        document.querySelector('meta[property="twitter:url"]').setAttribute("content", url);
-        document.querySelector('meta[property="twitter:title"]').setAttribute("content", title);
-        document.querySelector('meta[property="twitter:image"]').setAttribute("content", image);
-        document.querySelector('meta[property="twitter:description"]').setAttribute("content", description);
+        document.querySelector('meta[name="twitter:url"]').setAttribute("content", url);
+        document.querySelector('meta[name="twitter:title"]').setAttribute("content", title);
+        document.querySelector('meta[name="twitter:image"]').setAttribute("content", image);
+        document.querySelector('meta[name="twitter:description"]').setAttribute("content", description);
 
-        document.querySelector('meta[property="og:url"]').setAttribute("content", url);
-        document.querySelector('meta[property="og:title"]').setAttribute("content", title);
-        document.querySelector('meta[property="og:image"]').setAttribute("content", image);
-        document.querySelector('meta[property="og:description"]').setAttribute("content", description);
+        document.querySelector('meta[name="facebook:url"]').setAttribute("content", url);
+        document.querySelector('meta[name="facebook:title"]').setAttribute("content", title);
+        document.querySelector('meta[name="facebook:image"]').setAttribute("content", image);
+        document.querySelector('meta[name="facebook:description"]').setAttribute("content", description);
       }
-  </script>
+  </script>  
 </html>
