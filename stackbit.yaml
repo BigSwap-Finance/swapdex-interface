@@ -1,0 +1,5923 @@
+stackbitVersion: ~0.3.0
+dataDir: ''
+ssgName: gatsby
+cmsName: git
+nodeVersion: 10
+devCommand: npm run build
+models:
+  config_file_example:
+    type: data
+    label: Config File Example
+    file: public/assets/wizard/ConfigFile.Example.json
+    fields:
+      - type: list
+        name: tokens
+        label: Tokens
+        items:
+          type: object
+          fields:
+            - type: string
+              name: symbol
+              label: Symbol
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: primaryColor
+              label: Primary Color
+            - type: string
+              name: icon
+              label: Icon
+            - type: object
+              name: addresses
+              label: Addresses
+              fields:
+                - type: string
+                  name: '1'
+                  label: '1'
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: int
+            - type: number
+              name: displayDecimals
+              label: Display Decimals
+              subtype: int
+            - type: string
+              name: id
+              label: Id
+            - type: string
+              name: c_id
+              label: C Id
+            - type: string
+              name: website
+              label: Website
+            - type: string
+              name: description
+              label: Description
+            - type: string
+              name: mainnetAddress
+              label: Mainnet Address
+      - type: list
+        name: pairs
+        label: Pairs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: base
+              label: Base
+            - type: string
+              name: quote
+              label: Quote
+            - type: object
+              name: config
+              label: Config
+              fields:
+                - type: number
+                  name: basePrecision
+                  label: Base Precision
+                  subtype: int
+                - type: number
+                  name: pricePrecision
+                  label: Price Precision
+                  subtype: int
+                - type: number
+                  name: minAmount
+                  label: Min Amount
+                  subtype: int
+      - type: list
+        name: marketFilters
+        label: Market Filters
+        items:
+          type: object
+          fields:
+            - type: string
+              name: text
+              label: Text
+            - type: string
+              name: value
+              label: Value
+      - type: string
+        name: theme_name
+        label: Theme Name
+      - type: object
+        name: theme
+        label: Theme
+        fields:
+          - type: object
+            name: componentsTheme
+            label: Components Theme
+            fields:
+              - type: string
+                name: background
+                label: Background
+              - type: string
+                name: backgroundERC721
+                label: Background ERC 721
+              - type: string
+                name: borderColor
+                label: Border Color
+              - type: string
+                name: boxShadow
+                label: Box Shadow
+              - type: string
+                name: buttonBuyBackgroundColor
+                label: Button Buy Background Color
+              - type: string
+                name: buttonCollectibleSellBackgroundColor
+                label: Button Collectible Sell Background Color
+              - type: string
+                name: buttonConvertBackgroundColor
+                label: Button Convert Background Color
+              - type: string
+                name: buttonConvertBorderColor
+                label: Button Convert Border Color
+              - type: string
+                name: buttonConvertTextColor
+                label: Button Convert Text Color
+              - type: string
+                name: buttonErrorBackgroundColor
+                label: Button Error Background Color
+              - type: string
+                name: buttonPrimaryBackgroundColor
+                label: Button Primary Background Color
+              - type: string
+                name: buttonQuaternaryBackgroundColor
+                label: Button Quaternary Background Color
+              - type: string
+                name: buttonSecondaryBackgroundColor
+                label: Button Secondary Background Color
+              - type: string
+                name: buttonSellBackgroundColor
+                label: Button Sell Background Color
+              - type: string
+                name: buttonTertiaryBackgroundColor
+                label: Button Tertiary Background Color
+              - type: string
+                name: buttonPortisBackgroundColor
+                label: Button Portis Background Color
+              - type: string
+                name: buttonFortmaticBackgroundColor
+                label: Button Fortmatic Background Color
+              - type: string
+                name: buttonTorusBackgroundColor
+                label: Button Torus Background Color
+              - type: string
+                name: buttonTextColor
+                label: Button Text Color
+              - type: string
+                name: cardImageBackgroundColor
+                label: Card Image Background Color
+              - type: string
+                name: cardBackgroundColor
+                label: Card Background Color
+              - type: string
+                name: cardHeaderBackgroundColor
+                label: Card Header Background Color
+              - type: string
+                name: cardBorderColor
+                label: Card Border Color
+              - type: string
+                name: cardTitleColor
+                label: Card Title Color
+              - type: string
+                name: cardTitleOwnerColor
+                label: Card Title Owner Color
+              - type: string
+                name: cardTitleFontSize
+                label: Card Title Font Size
+              - type: string
+                name: chartColor
+                label: Chart Color
+              - type: string
+                name: darkBlue
+                label: Dark Blue
+              - type: string
+                name: darkGray
+                label: Dark Gray
+              - type: string
+                name: darkerGray
+                label: Darker Gray
+              - type: string
+                name: dropdownBackgroundColor
+                label: Dropdown Background Color
+              - type: string
+                name: dropdownBorderColor
+                label: Dropdown Border Color
+              - type: string
+                name: dropdownTextColor
+                label: Dropdown Text Color
+              - type: string
+                name: errorButtonBackground
+                label: Error Button Background
+              - type: string
+                name: errorCardBackground
+                label: Error Card Background
+              - type: string
+                name: errorCardBorder
+                label: Error Card Border
+              - type: string
+                name: errorCardText
+                label: Error Card Text
+              - type: string
+                name: ethBoxActiveColor
+                label: Eth Box Active Color
+              - type: string
+                name: ethBoxBorderColor
+                label: Eth Box Border Color
+              - type: string
+                name: ethSetMinEthButtonBorderColor
+                label: Eth Set Min Eth Button Border Color
+              - type: string
+                name: ethSliderThumbBorderColor
+                label: Eth Slider Thumb Border Color
+              - type: string
+                name: ethSliderThumbColor
+                label: Eth Slider Thumb Color
+              - type: string
+                name: gray
+                label: Gray
+              - type: string
+                name: green
+                label: Green
+              - type: string
+                name: iconLockedColor
+                label: Icon Locked Color
+              - type: string
+                name: iconUnlockedColor
+                label: Icon Unlocked Color
+              - type: string
+                name: inactiveTabBackgroundColor
+                label: Inactive Tab Background Color
+              - type: string
+                name: lightGray
+                label: Light Gray
+              - type: string
+                name: logoERC20Color
+                label: Logo ERC 20 Color
+              - type: string
+                name: logoERC20TextColor
+                label: Logo ERC 20 Text Color
+              - type: string
+                name: logoERC721Color
+                label: Logo ERC 721 Color
+              - type: string
+                name: logoERC721TextColor
+                label: Logo ERC 721 Text Color
+              - type: string
+                name: marketsSearchFieldBackgroundColor
+                label: Markets Search Field Background Color
+              - type: string
+                name: marketsSearchFieldBorderColor
+                label: Markets Search Field Border Color
+              - type: string
+                name: marketsSearchFieldTextColor
+                label: Markets Search Field Text Color
+              - type: string
+                name: modalSearchFieldBackgroundColor
+                label: Modal Search Field Background Color
+              - type: string
+                name: modalSearchFieldBorderColor
+                label: Modal Search Field Border Color
+              - type: string
+                name: modalSearchFieldPlaceholderColor
+                label: Modal Search Field Placeholder Color
+              - type: string
+                name: modalSearchFieldTextColor
+                label: Modal Search Field Text Color
+              - type: string
+                name: myWalletLinkColor
+                label: My Wallet Link Color
+              - type: string
+                name: notificationActive
+                label: Notification Active
+              - type: string
+                name: notificationIconColor
+                label: Notification Icon Color
+              - type: string
+                name: notificationsBadgeColor
+                label: Notifications Badge Color
+              - type: string
+                name: numberDecimalsColor
+                label: Number Decimals Color
+              - type: string
+                name: red
+                label: Red
+              - type: string
+                name: rowActive
+                label: Row Active
+              - type: string
+                name: rowOrderActive
+                label: Row Order Active
+              - type: string
+                name: simplifiedTextBoxColor
+                label: Simplified Text Box Color
+              - type: string
+                name: stepsProgressCheckMarkColor
+                label: Steps Progress Check Mark Color
+              - type: string
+                name: stepsProgressStartingDotColor
+                label: Steps Progress Starting Dot Color
+              - type: string
+                name: stepsProgressStepLineColor
+                label: Steps Progress Step Line Color
+              - type: string
+                name: stepsProgressStepLineProgressColor
+                label: Steps Progress Step Line Progress Color
+              - type: string
+                name: stepsProgressStepTitleColor
+                label: Steps Progress Step Title Color
+              - type: string
+                name: stepsProgressStepTitleColorActive
+                label: Steps Progress Step Title Color Active
+              - type: string
+                name: tableBorderColor
+                label: Table Border Color
+              - type: string
+                name: tdColor
+                label: Td Color
+              - type: string
+                name: textColorCommon
+                label: Text Color Common
+              - type: string
+                name: textDark
+                label: Text Dark
+              - type: string
+                name: textInputBackgroundColor
+                label: Text Input Background Color
+              - type: string
+                name: textInputBorderColor
+                label: Text Input Border Color
+              - type: string
+                name: textInputTextColor
+                label: Text Input Text Color
+              - type: string
+                name: textLight
+                label: Text Light
+              - type: string
+                name: textLighter
+                label: Text Lighter
+              - type: string
+                name: thColor
+                label: Th Color
+              - type: string
+                name: tooltipBackgroundColor
+                label: Tooltip Background Color
+              - type: string
+                name: tooltipTextColor
+                label: Tooltip Text Color
+              - type: string
+                name: topbarBackgroundColor
+                label: Topbar Background Color
+              - type: string
+                name: topbarBorderColor
+                label: Topbar Border Color
+              - type: string
+                name: topbarSeparatorColor
+                label: Topbar Separator Color
+              - type: string
+                name: tdFontSize
+                label: Td Font Size
+              - type: string
+                name: thFontSize
+                label: Th Font Size
+              - type: string
+                name: orderbookTDFontSize
+                label: Orderbook TD Font Size
+              - type: string
+                name: orderbookTHFontSize
+                label: Orderbook TH Font Size
+              - type: string
+                name: marketFillsTDFontSize
+                label: Market Fills TD Font Size
+              - type: string
+                name: marketFillsTHFontSize
+                label: Market Fills TH Font Size
+              - type: string
+                name: marketListTHFontSize
+                label: Market List TH Font Size
+              - type: string
+                name: marketListTDFontSize
+                label: Market List TD Font Size
+              - type: string
+                name: marketStatsTHFontSize
+                label: Market Stats TH Font Size
+              - type: string
+                name: marketStatsTDFontSize
+                label: Market Stats TD Font Size
+              - type: string
+                name: marketDetailsTHFontSize
+                label: Market Details TH Font Size
+              - type: string
+                name: marketDetailsTDFontSize
+                label: Market Details TD Font Size
+          - type: object
+            name: modalTheme
+            label: Modal Theme
+            fields:
+              - type: object
+                name: content
+                label: Content
+                fields:
+                  - type: string
+                    name: backgroundColor
+                    label: Background Color
+                  - type: string
+                    name: borderColor
+                    label: Border Color
+                  - type: string
+                    name: bottom
+                    label: Bottom
+                  - type: string
+                    name: display
+                    label: Display
+                  - type: string
+                    name: flexDirection
+                    label: Flex Direction
+                  - type: number
+                    name: flexGrow
+                    label: Flex Grow
+                    subtype: int
+                  - type: string
+                    name: left
+                    label: Left
+                  - type: string
+                    name: maxHeight
+                    label: Max Height
+                  - type: string
+                    name: minWidth
+                    label: Min Width
+                  - type: string
+                    name: overflow
+                    label: Overflow
+                  - type: string
+                    name: padding
+                    label: Padding
+                  - type: string
+                    name: position
+                    label: Position
+                  - type: string
+                    name: right
+                    label: Right
+                  - type: string
+                    name: top
+                    label: Top
+              - type: object
+                name: overlay
+                label: Overlay
+                fields:
+                  - type: string
+                    name: alignItems
+                    label: Align Items
+                  - type: string
+                    name: backgroundColor
+                    label: Background Color
+                  - type: string
+                    name: display
+                    label: Display
+                  - type: string
+                    name: justifyContent
+                    label: Justify Content
+                  - type: number
+                    name: zIndex
+                    label: Z Index
+                    subtype: int
+      - type: object
+        name: theme_dark
+        label: Theme Dark
+        fields:
+          - type: object
+            name: componentsTheme
+            label: Components Theme
+            fields:
+              - type: string
+                name: background
+                label: Background
+              - type: string
+                name: backgroundERC721
+                label: Background ERC 721
+              - type: string
+                name: borderColor
+                label: Border Color
+              - type: string
+                name: boxShadow
+                label: Box Shadow
+              - type: string
+                name: buttonBuyBackgroundColor
+                label: Button Buy Background Color
+              - type: string
+                name: buttonCollectibleSellBackgroundColor
+                label: Button Collectible Sell Background Color
+              - type: string
+                name: buttonConvertBackgroundColor
+                label: Button Convert Background Color
+              - type: string
+                name: buttonConvertBorderColor
+                label: Button Convert Border Color
+              - type: string
+                name: buttonConvertTextColor
+                label: Button Convert Text Color
+              - type: string
+                name: buttonErrorBackgroundColor
+                label: Button Error Background Color
+              - type: string
+                name: buttonPrimaryBackgroundColor
+                label: Button Primary Background Color
+              - type: string
+                name: buttonQuaternaryBackgroundColor
+                label: Button Quaternary Background Color
+              - type: string
+                name: buttonSecondaryBackgroundColor
+                label: Button Secondary Background Color
+              - type: string
+                name: buttonSellBackgroundColor
+                label: Button Sell Background Color
+              - type: string
+                name: buttonTertiaryBackgroundColor
+                label: Button Tertiary Background Color
+              - type: string
+                name: buttonPortisBackgroundColor
+                label: Button Portis Background Color
+              - type: string
+                name: buttonFortmaticBackgroundColor
+                label: Button Fortmatic Background Color
+              - type: string
+                name: buttonTorusBackgroundColor
+                label: Button Torus Background Color
+              - type: string
+                name: buttonTextColor
+                label: Button Text Color
+              - type: string
+                name: cardImageBackgroundColor
+                label: Card Image Background Color
+              - type: string
+                name: cardBackgroundColor
+                label: Card Background Color
+              - type: string
+                name: cardHeaderBackgroundColor
+                label: Card Header Background Color
+              - type: string
+                name: cardBorderColor
+                label: Card Border Color
+              - type: string
+                name: cardTitleColor
+                label: Card Title Color
+              - type: string
+                name: cardTitleOwnerColor
+                label: Card Title Owner Color
+              - type: string
+                name: cardTitleFontSize
+                label: Card Title Font Size
+              - type: string
+                name: chartColor
+                label: Chart Color
+              - type: string
+                name: darkBlue
+                label: Dark Blue
+              - type: string
+                name: darkGray
+                label: Dark Gray
+              - type: string
+                name: darkerGray
+                label: Darker Gray
+              - type: string
+                name: dropdownBackgroundColor
+                label: Dropdown Background Color
+              - type: string
+                name: dropdownBorderColor
+                label: Dropdown Border Color
+              - type: string
+                name: dropdownTextColor
+                label: Dropdown Text Color
+              - type: string
+                name: errorButtonBackground
+                label: Error Button Background
+              - type: string
+                name: errorCardBackground
+                label: Error Card Background
+              - type: string
+                name: errorCardBorder
+                label: Error Card Border
+              - type: string
+                name: errorCardText
+                label: Error Card Text
+              - type: string
+                name: ethBoxActiveColor
+                label: Eth Box Active Color
+              - type: string
+                name: ethBoxBorderColor
+                label: Eth Box Border Color
+              - type: string
+                name: ethSetMinEthButtonBorderColor
+                label: Eth Set Min Eth Button Border Color
+              - type: string
+                name: ethSliderThumbBorderColor
+                label: Eth Slider Thumb Border Color
+              - type: string
+                name: ethSliderThumbColor
+                label: Eth Slider Thumb Color
+              - type: string
+                name: gray
+                label: Gray
+              - type: string
+                name: green
+                label: Green
+              - type: string
+                name: iconLockedColor
+                label: Icon Locked Color
+              - type: string
+                name: iconUnlockedColor
+                label: Icon Unlocked Color
+              - type: string
+                name: inactiveTabBackgroundColor
+                label: Inactive Tab Background Color
+              - type: string
+                name: lightGray
+                label: Light Gray
+              - type: string
+                name: logoERC20Color
+                label: Logo ERC 20 Color
+              - type: string
+                name: logoERC20TextColor
+                label: Logo ERC 20 Text Color
+              - type: string
+                name: logoERC721Color
+                label: Logo ERC 721 Color
+              - type: string
+                name: logoERC721TextColor
+                label: Logo ERC 721 Text Color
+              - type: string
+                name: marketsSearchFieldBackgroundColor
+                label: Markets Search Field Background Color
+              - type: string
+                name: marketsSearchFieldBorderColor
+                label: Markets Search Field Border Color
+              - type: string
+                name: marketsSearchFieldTextColor
+                label: Markets Search Field Text Color
+              - type: string
+                name: modalSearchFieldBackgroundColor
+                label: Modal Search Field Background Color
+              - type: string
+                name: modalSearchFieldBorderColor
+                label: Modal Search Field Border Color
+              - type: string
+                name: modalSearchFieldPlaceholderColor
+                label: Modal Search Field Placeholder Color
+              - type: string
+                name: modalSearchFieldTextColor
+                label: Modal Search Field Text Color
+              - type: string
+                name: myWalletLinkColor
+                label: My Wallet Link Color
+              - type: string
+                name: notificationActive
+                label: Notification Active
+              - type: string
+                name: notificationIconColor
+                label: Notification Icon Color
+              - type: string
+                name: notificationsBadgeColor
+                label: Notifications Badge Color
+              - type: string
+                name: numberDecimalsColor
+                label: Number Decimals Color
+              - type: string
+                name: red
+                label: Red
+              - type: string
+                name: rowActive
+                label: Row Active
+              - type: string
+                name: rowOrderActive
+                label: Row Order Active
+              - type: string
+                name: simplifiedTextBoxColor
+                label: Simplified Text Box Color
+              - type: string
+                name: stepsProgressCheckMarkColor
+                label: Steps Progress Check Mark Color
+              - type: string
+                name: stepsProgressStartingDotColor
+                label: Steps Progress Starting Dot Color
+              - type: string
+                name: stepsProgressStepLineColor
+                label: Steps Progress Step Line Color
+              - type: string
+                name: stepsProgressStepLineProgressColor
+                label: Steps Progress Step Line Progress Color
+              - type: string
+                name: stepsProgressStepTitleColor
+                label: Steps Progress Step Title Color
+              - type: string
+                name: stepsProgressStepTitleColorActive
+                label: Steps Progress Step Title Color Active
+              - type: string
+                name: tableBorderColor
+                label: Table Border Color
+              - type: string
+                name: tdColor
+                label: Td Color
+              - type: string
+                name: textColorCommon
+                label: Text Color Common
+              - type: string
+                name: textDark
+                label: Text Dark
+              - type: string
+                name: textInputBackgroundColor
+                label: Text Input Background Color
+              - type: string
+                name: textInputBorderColor
+                label: Text Input Border Color
+              - type: string
+                name: textInputTextColor
+                label: Text Input Text Color
+              - type: string
+                name: textLight
+                label: Text Light
+              - type: string
+                name: textLighter
+                label: Text Lighter
+              - type: string
+                name: thColor
+                label: Th Color
+              - type: string
+                name: tooltipBackgroundColor
+                label: Tooltip Background Color
+              - type: string
+                name: tooltipTextColor
+                label: Tooltip Text Color
+              - type: string
+                name: topbarBackgroundColor
+                label: Topbar Background Color
+              - type: string
+                name: topbarBorderColor
+                label: Topbar Border Color
+              - type: string
+                name: topbarSeparatorColor
+                label: Topbar Separator Color
+              - type: string
+                name: tdFontSize
+                label: Td Font Size
+              - type: string
+                name: thFontSize
+                label: Th Font Size
+              - type: string
+                name: orderbookTDFontSize
+                label: Orderbook TD Font Size
+              - type: string
+                name: orderbookTHFontSize
+                label: Orderbook TH Font Size
+              - type: string
+                name: marketFillsTDFontSize
+                label: Market Fills TD Font Size
+              - type: string
+                name: marketFillsTHFontSize
+                label: Market Fills TH Font Size
+              - type: string
+                name: marketListTHFontSize
+                label: Market List TH Font Size
+              - type: string
+                name: marketListTDFontSize
+                label: Market List TD Font Size
+              - type: string
+                name: marketStatsTHFontSize
+                label: Market Stats TH Font Size
+              - type: string
+                name: marketStatsTDFontSize
+                label: Market Stats TD Font Size
+              - type: string
+                name: marketDetailsTHFontSize
+                label: Market Details TH Font Size
+              - type: string
+                name: marketDetailsTDFontSize
+                label: Market Details TD Font Size
+          - type: object
+            name: modalTheme
+            label: Modal Theme
+            fields:
+              - type: object
+                name: content
+                label: Content
+                fields:
+                  - type: string
+                    name: backgroundColor
+                    label: Background Color
+                  - type: string
+                    name: borderColor
+                    label: Border Color
+                  - type: string
+                    name: bottom
+                    label: Bottom
+                  - type: string
+                    name: display
+                    label: Display
+                  - type: string
+                    name: flexDirection
+                    label: Flex Direction
+                  - type: number
+                    name: flexGrow
+                    label: Flex Grow
+                    subtype: int
+                  - type: string
+                    name: left
+                    label: Left
+                  - type: string
+                    name: maxHeight
+                    label: Max Height
+                  - type: string
+                    name: minWidth
+                    label: Min Width
+                  - type: string
+                    name: overflow
+                    label: Overflow
+                  - type: string
+                    name: padding
+                    label: Padding
+                  - type: string
+                    name: position
+                    label: Position
+                  - type: string
+                    name: right
+                    label: Right
+                  - type: string
+                    name: top
+                    label: Top
+              - type: object
+                name: overlay
+                label: Overlay
+                fields:
+                  - type: string
+                    name: alignItems
+                    label: Align Items
+                  - type: string
+                    name: backgroundColor
+                    label: Background Color
+                  - type: string
+                    name: display
+                    label: Display
+                  - type: string
+                    name: justifyContent
+                    label: Justify Content
+                  - type: number
+                    name: zIndex
+                    label: Z Index
+                    subtype: int
+      - type: object
+        name: theme_light
+        label: Theme Light
+        fields:
+          - type: object
+            name: componentsTheme
+            label: Components Theme
+            fields:
+              - type: string
+                name: background
+                label: Background
+              - type: string
+                name: backgroundERC721
+                label: Background ERC 721
+              - type: string
+                name: borderColor
+                label: Border Color
+              - type: string
+                name: boxShadow
+                label: Box Shadow
+              - type: string
+                name: buttonBuyBackgroundColor
+                label: Button Buy Background Color
+              - type: string
+                name: buttonCollectibleSellBackgroundColor
+                label: Button Collectible Sell Background Color
+              - type: string
+                name: buttonConvertBackgroundColor
+                label: Button Convert Background Color
+              - type: string
+                name: buttonConvertBorderColor
+                label: Button Convert Border Color
+              - type: string
+                name: buttonConvertTextColor
+                label: Button Convert Text Color
+              - type: string
+                name: buttonErrorBackgroundColor
+                label: Button Error Background Color
+              - type: string
+                name: buttonPrimaryBackgroundColor
+                label: Button Primary Background Color
+              - type: string
+                name: buttonQuaternaryBackgroundColor
+                label: Button Quaternary Background Color
+              - type: string
+                name: buttonSecondaryBackgroundColor
+                label: Button Secondary Background Color
+              - type: string
+                name: buttonSellBackgroundColor
+                label: Button Sell Background Color
+              - type: string
+                name: buttonTertiaryBackgroundColor
+                label: Button Tertiary Background Color
+              - type: string
+                name: buttonTextColor
+                label: Button Text Color
+              - type: string
+                name: buttonPortisBackgroundColor
+                label: Button Portis Background Color
+              - type: string
+                name: buttonFortmaticBackgroundColor
+                label: Button Fortmatic Background Color
+              - type: string
+                name: buttonTorusBackgroundColor
+                label: Button Torus Background Color
+              - type: string
+                name: cardImageBackgroundColor
+                label: Card Image Background Color
+              - type: string
+                name: cardBackgroundColor
+                label: Card Background Color
+              - type: string
+                name: cardHeaderBackgroundColor
+                label: Card Header Background Color
+              - type: string
+                name: cardBorderColor
+                label: Card Border Color
+              - type: string
+                name: cardTitleColor
+                label: Card Title Color
+              - type: string
+                name: cardTitleOwnerColor
+                label: Card Title Owner Color
+              - type: string
+                name: cardTitleFontSize
+                label: Card Title Font Size
+              - type: string
+                name: chartColor
+                label: Chart Color
+              - type: string
+                name: darkBlue
+                label: Dark Blue
+              - type: string
+                name: darkGray
+                label: Dark Gray
+              - type: string
+                name: darkerGray
+                label: Darker Gray
+              - type: string
+                name: dropdownBackgroundColor
+                label: Dropdown Background Color
+              - type: string
+                name: dropdownBorderColor
+                label: Dropdown Border Color
+              - type: string
+                name: dropdownTextColor
+                label: Dropdown Text Color
+              - type: string
+                name: errorButtonBackground
+                label: Error Button Background
+              - type: string
+                name: errorCardBackground
+                label: Error Card Background
+              - type: string
+                name: errorCardBorder
+                label: Error Card Border
+              - type: string
+                name: errorCardText
+                label: Error Card Text
+              - type: string
+                name: ethBoxActiveColor
+                label: Eth Box Active Color
+              - type: string
+                name: ethBoxBorderColor
+                label: Eth Box Border Color
+              - type: string
+                name: ethSetMinEthButtonBorderColor
+                label: Eth Set Min Eth Button Border Color
+              - type: string
+                name: ethSliderThumbBorderColor
+                label: Eth Slider Thumb Border Color
+              - type: string
+                name: ethSliderThumbColor
+                label: Eth Slider Thumb Color
+              - type: string
+                name: gray
+                label: Gray
+              - type: string
+                name: green
+                label: Green
+              - type: string
+                name: iconLockedColor
+                label: Icon Locked Color
+              - type: string
+                name: iconUnlockedColor
+                label: Icon Unlocked Color
+              - type: string
+                name: inactiveTabBackgroundColor
+                label: Inactive Tab Background Color
+              - type: string
+                name: lightGray
+                label: Light Gray
+              - type: string
+                name: logoERC20Color
+                label: Logo ERC 20 Color
+              - type: string
+                name: logoERC20TextColor
+                label: Logo ERC 20 Text Color
+              - type: string
+                name: logoERC721Color
+                label: Logo ERC 721 Color
+              - type: string
+                name: logoERC721TextColor
+                label: Logo ERC 721 Text Color
+              - type: string
+                name: marketsSearchFieldBackgroundColor
+                label: Markets Search Field Background Color
+              - type: string
+                name: marketsSearchFieldBorderColor
+                label: Markets Search Field Border Color
+              - type: string
+                name: marketsSearchFieldTextColor
+                label: Markets Search Field Text Color
+              - type: string
+                name: modalSearchFieldBackgroundColor
+                label: Modal Search Field Background Color
+              - type: string
+                name: modalSearchFieldBorderColor
+                label: Modal Search Field Border Color
+              - type: string
+                name: modalSearchFieldPlaceholderColor
+                label: Modal Search Field Placeholder Color
+              - type: string
+                name: modalSearchFieldTextColor
+                label: Modal Search Field Text Color
+              - type: string
+                name: myWalletLinkColor
+                label: My Wallet Link Color
+              - type: string
+                name: notificationActive
+                label: Notification Active
+              - type: string
+                name: notificationIconColor
+                label: Notification Icon Color
+              - type: string
+                name: notificationsBadgeColor
+                label: Notifications Badge Color
+              - type: string
+                name: numberDecimalsColor
+                label: Number Decimals Color
+              - type: string
+                name: red
+                label: Red
+              - type: string
+                name: rowActive
+                label: Row Active
+              - type: string
+                name: rowOrderActive
+                label: Row Order Active
+              - type: string
+                name: simplifiedTextBoxColor
+                label: Simplified Text Box Color
+              - type: string
+                name: stepsProgressCheckMarkColor
+                label: Steps Progress Check Mark Color
+              - type: string
+                name: stepsProgressStartingDotColor
+                label: Steps Progress Starting Dot Color
+              - type: string
+                name: stepsProgressStepLineColor
+                label: Steps Progress Step Line Color
+              - type: string
+                name: stepsProgressStepLineProgressColor
+                label: Steps Progress Step Line Progress Color
+              - type: string
+                name: stepsProgressStepTitleColor
+                label: Steps Progress Step Title Color
+              - type: string
+                name: stepsProgressStepTitleColorActive
+                label: Steps Progress Step Title Color Active
+              - type: string
+                name: tableBorderColor
+                label: Table Border Color
+              - type: string
+                name: tdColor
+                label: Td Color
+              - type: string
+                name: tdFontSize
+                label: Td Font Size
+              - type: string
+                name: textColorCommon
+                label: Text Color Common
+              - type: string
+                name: textDark
+                label: Text Dark
+              - type: string
+                name: textInputBackgroundColor
+                label: Text Input Background Color
+              - type: string
+                name: textInputBorderColor
+                label: Text Input Border Color
+              - type: string
+                name: textInputTextColor
+                label: Text Input Text Color
+              - type: string
+                name: textLight
+                label: Text Light
+              - type: string
+                name: textLighter
+                label: Text Lighter
+              - type: string
+                name: thColor
+                label: Th Color
+              - type: string
+                name: thFontSize
+                label: Th Font Size
+              - type: string
+                name: tooltipBackgroundColor
+                label: Tooltip Background Color
+              - type: string
+                name: tooltipTextColor
+                label: Tooltip Text Color
+              - type: string
+                name: topbarBackgroundColor
+                label: Topbar Background Color
+              - type: string
+                name: topbarBorderColor
+                label: Topbar Border Color
+              - type: string
+                name: topbarSeparatorColor
+                label: Topbar Separator Color
+              - type: string
+                name: orderbookTDFontSize
+                label: Orderbook TD Font Size
+              - type: string
+                name: orderbookTHFontSize
+                label: Orderbook TH Font Size
+              - type: string
+                name: marketFillsTDFontSize
+                label: Market Fills TD Font Size
+              - type: string
+                name: marketFillsTHFontSize
+                label: Market Fills TH Font Size
+              - type: string
+                name: marketListTHFontSize
+                label: Market List TH Font Size
+              - type: string
+                name: marketListTDFontSize
+                label: Market List TD Font Size
+              - type: string
+                name: marketStatsTHFontSize
+                label: Market Stats TH Font Size
+              - type: string
+                name: marketStatsTDFontSize
+                label: Market Stats TD Font Size
+              - type: string
+                name: marketDetailsTHFontSize
+                label: Market Details TH Font Size
+              - type: string
+                name: marketDetailsTDFontSize
+                label: Market Details TD Font Size
+          - type: object
+            name: modalTheme
+            label: Modal Theme
+            fields:
+              - type: object
+                name: content
+                label: Content
+                fields:
+                  - type: string
+                    name: backgroundColor
+                    label: Background Color
+                  - type: string
+                    name: borderColor
+                    label: Border Color
+                  - type: string
+                    name: bottom
+                    label: Bottom
+                  - type: string
+                    name: display
+                    label: Display
+                  - type: string
+                    name: flexDirection
+                    label: Flex Direction
+                  - type: number
+                    name: flexGrow
+                    label: Flex Grow
+                    subtype: int
+                  - type: string
+                    name: left
+                    label: Left
+                  - type: string
+                    name: maxHeight
+                    label: Max Height
+                  - type: string
+                    name: minWidth
+                    label: Min Width
+                  - type: string
+                    name: overflow
+                    label: Overflow
+                  - type: string
+                    name: padding
+                    label: Padding
+                  - type: string
+                    name: position
+                    label: Position
+                  - type: string
+                    name: right
+                    label: Right
+                  - type: string
+                    name: top
+                    label: Top
+              - type: object
+                name: overlay
+                label: Overlay
+                fields:
+                  - type: string
+                    name: alignItems
+                    label: Align Items
+                  - type: string
+                    name: backgroundColor
+                    label: Background Color
+                  - type: string
+                    name: display
+                    label: Display
+                  - type: string
+                    name: justifyContent
+                    label: Justify Content
+                  - type: number
+                    name: zIndex
+                    label: Z Index
+                    subtype: int
+      - type: string
+        name: layout
+        label: Layout
+      - type: object
+        name: general
+        label: General
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: domain
+            label: Domain
+          - type: string
+            name: feePercentage
+            label: Fee Percentage
+          - type: string
+            name: icon
+            label: Icon
+          - type: string
+            name: feeRecipient
+            label: Fee Recipient
+  manifest:
+    type: data
+    label: Manifest
+    file: public/manifest.json
+    fields:
+      - type: string
+        name: short_name
+        label: Short Name
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: description
+        label: Description
+      - type: list
+        name: icons
+        label: Icons
+        items:
+          type: object
+          fields:
+            - type: string
+              name: src
+              label: Src
+            - type: string
+              name: sizes
+              label: Sizes
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: start_url
+        label: Start Url
+      - type: string
+        name: display
+        label: Display
+      - type: string
+        name: theme_color
+        label: Theme Color
+      - type: string
+        name: background_color
+        label: Background Color
+  config_ieo:
+    type: data
+    label: Config Ieo
+    file: src/config/mainnet/config-ieo.json
+    fields:
+      - type: list
+        name: tokens
+        label: Tokens
+        items:
+          type: object
+          fields:
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: int
+            - type: string
+              name: symbol
+              label: Symbol
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: primaryColor
+              label: Primary Color
+            - type: image
+              name: icon
+              label: Icon
+            - type: object
+              name: addresses
+              label: Addresses
+              fields:
+                - type: string
+                  name: '1'
+                  label: '1'
+                - type: string
+                  name: '3'
+                  label: '3'
+                - type: string
+                  name: '4'
+                  label: '4'
+                - type: string
+                  name: '42'
+                  label: '42'
+                - type: string
+                  name: '50'
+                  label: '50'
+            - type: string
+              name: id
+              label: Id
+            - type: string
+              name: c_id
+              label: C Id
+            - type: number
+              name: displayDecimals
+              label: Display Decimals
+              subtype: int
+            - type: string
+              name: description
+              label: Description
+            - type: string
+              name: website
+              label: Website
+            - type: boolean
+              name: isStableCoin
+              label: Is Stable Coin
+  config:
+    type: data
+    label: Config
+    folder: src/config
+    fields:
+      - type: object
+        name: coins
+        label: Coins
+        fields:
+          - type: object
+            name: eth
+            label: Eth
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: float
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: float
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+      - type: object
+        name: tokens
+        label: Tokens
+        fields:
+          - type: object
+            name: vsf
+            label: Vsf
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+                  - type: object
+                    name: flipLite
+                    label: Flip Lite
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+                  - type: object
+                    name: flip
+                    label: Flip
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+                  - type: object
+                    name: roulette
+                    label: Roulette
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: vsffree
+            label: Vsffree
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: boolean
+                name: events
+                label: Events
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: minimumWithdrawal
+                label: Minimum Withdrawal
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawal
+                label: Maximum Withdrawal
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+          - type: object
+            name: vsfblackfriday
+            label: Vsfblackfriday
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: boolean
+                name: events
+                label: Events
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: minimumWithdrawal
+                label: Minimum Withdrawal
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawal
+                label: Maximum Withdrawal
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+          - type: object
+            name: zeus
+            label: Zeus
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: pop
+            label: Pop
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: dpc
+            label: Dpc
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: tuck
+            label: Tuck
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: rxt
+            label: Rxt
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: 0xbtc
+            label: 0 Xbtc
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: float
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: void
+            label: Void
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: vya
+            label: Vya
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: vdex
+            label: Vdex
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: angel
+            label: Angel
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: float
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: mia
+            label: Mia
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: sam
+            label: Sam
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: triz
+            label: Triz
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: rbc
+            label: Rbc
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: ldex
+            label: Ldex
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: idn
+            label: Idn
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: ash
+            label: Ash
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: pixby
+            label: Pixby
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: nuk
+            label: Nuk
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: muxe
+            label: Muxe
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: seol
+            label: Seol
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: wwt
+            label: Wwt
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: ltn
+            label: Ltn
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: bcp
+            label: Bcp
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: chess
+            label: Chess
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: whackd
+            label: Whackd
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: ethbold
+            label: Ethbold
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: bdax
+            label: Bdax
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: defl
+            label: Defl
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: boolean
+                name: ethOnly
+                label: Eth Only
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: int
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+              - type: object
+                name: games
+                label: Games
+                fields:
+                  - type: object
+                    name: dice
+                    label: Dice
+                    fields:
+                      - type: number
+                        name: houseFee
+                        label: House Fee
+                        subtype: int
+                      - type: number
+                        name: minTokens
+                        label: Min Tokens
+                        subtype: int
+                      - type: number
+                        name: maxTokens
+                        label: Max Tokens
+                        subtype: int
+                      - type: string
+                        name: name
+                        label: Name
+          - type: object
+            name: weth
+            label: Weth
+            fields:
+              - type: string
+                name: ticker
+                label: Ticker
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: mainnet-contract
+                label: Mainnet Contract
+              - type: string
+                name: testnet-contract
+                label: Testnet Contract
+              - type: string
+                name: contract
+                label: Contract
+              - type: string
+                name: info
+                label: Info
+              - type: number
+                name: minimumWithdrawalCharge
+                label: Minimum Withdrawal Charge
+                subtype: float
+              - type: number
+                name: maximumWithdrawalCharge
+                label: Maximum Withdrawal Charge
+                subtype: float
+              - type: number
+                name: decimals
+                label: Decimals
+                subtype: int
+  config_1:
+    type: data
+    label: Config 1
+    folder: src/config
+    fields:
+      - type: list
+        name: defaultWhitelistAddresses
+        label: Default Whitelist Addresses
+        items:
+          type: string
+      - type: number
+        name: defaultFeePercentage
+        label: Default Fee Percentage
+        subtype: float
+  testnet:
+    type: data
+    label: Testnet
+    file: src/config/testnet.json
+    fields:
+      - type: string
+        name: contractEtherDelta
+        label: Contract Ether Delta
+      - type: string
+        name: contractToken
+        label: Contract Token
+      - type: string
+        name: contractReserveToken
+        label: Contract Reserve Token
+      - type: list
+        name: contractEtherDeltaAddrs
+        label: Contract Ether Delta Addrs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: addr
+              label: Addr
+            - type: string
+              name: info
+              label: Info
+      - type: string
+        name: ethTestnet
+        label: Eth Testnet
+      - type: number
+        name: ethChainId
+        label: Eth Chain Id
+        subtype: int
+      - type: string
+        name: ethProvider
+        label: Eth Provider
+      - type: number
+        name: ethGasPrice
+        label: Eth Gas Price
+        subtype: int
+      - type: string
+        name: ethAddr
+        label: Eth Addr
+      - type: string
+        name: ethAddrPrivateKey
+        label: Eth Addr Private Key
+      - type: number
+        name: gasApprove
+        label: Gas Approve
+        subtype: int
+      - type: number
+        name: gasDeposit
+        label: Gas Deposit
+        subtype: int
+      - type: number
+        name: gasWithdraw
+        label: Gas Withdraw
+        subtype: int
+      - type: number
+        name: gasTrade
+        label: Gas Trade
+        subtype: int
+      - type: number
+        name: gasOrder
+        label: Gas Order
+        subtype: int
+      - type: number
+        name: minOrderSize
+        label: Min Order Size
+        subtype: float
+      - type: list
+        name: socketServer
+        label: Socket Server
+        items:
+          type: string
+      - type: string
+        name: userCookie
+        label: User Cookie
+      - type: string
+        name: eventsCacheCookie
+        label: Events Cache Cookie
+      - type: string
+        name: ordersCacheCookie
+        label: Orders Cache Cookie
+      - type: string
+        name: etherscanAPIKey
+        label: Etherscan API Key
+      - type: list
+        name: tokens
+        label: Tokens
+        items:
+          type: object
+          fields:
+            - type: string
+              name: addr
+              label: Addr
+            - type: string
+              name: name
+              label: Name
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: int
+      - type: object
+        name: defaultPair
+        label: Default Pair
+        fields:
+          - type: string
+            name: token
+            label: Token
+          - type: string
+            name: base
+            label: Base
+      - type: list
+        name: pairs
+        label: Pairs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: token
+              label: Token
+            - type: string
+              name: base
+              label: Base
+  config_2:
+    type: data
+    label: Config 2
+    folder: src/config
+    fields:
+      - type: string
+        name: contractSwitchDex
+        label: Contract Switch Dex
+      - type: string
+        name: contractToken
+        label: Contract Token
+      - type: string
+        name: contractReserveToken
+        label: Contract Reserve Token
+      - type: list
+        name: contractSwitchDexAddrs
+        label: Contract Switch Dex Addrs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: addr
+              label: Addr
+            - type: string
+              name: info
+              label: Info
+      - type: boolean
+        name: ethTestnet
+        label: Eth Testnet
+      - type: number
+        name: ethChainId
+        label: Eth Chain Id
+        subtype: int
+      - type: string
+        name: ethProvider
+        label: Eth Provider
+      - type: number
+        name: ethGasPrice
+        label: Eth Gas Price
+        subtype: int
+      - type: string
+        name: ethAddr
+        label: Eth Addr
+      - type: string
+        name: ethAddrPrivateKey
+        label: Eth Addr Private Key
+      - type: number
+        name: gasApprove
+        label: Gas Approve
+        subtype: int
+      - type: number
+        name: gasDeposit
+        label: Gas Deposit
+        subtype: int
+      - type: number
+        name: gasWithdraw
+        label: Gas Withdraw
+        subtype: int
+      - type: number
+        name: gasTrade
+        label: Gas Trade
+        subtype: int
+      - type: number
+        name: gasOrder
+        label: Gas Order
+        subtype: int
+      - type: number
+        name: minOrderSize
+        label: Min Order Size
+        subtype: float
+      - type: list
+        name: socketServer
+        label: Socket Server
+        items:
+          type: string
+      - type: string
+        name: userCookie
+        label: User Cookie
+      - type: string
+        name: eventsCacheCookie
+        label: Events Cache Cookie
+      - type: string
+        name: ordersCacheCookie
+        label: Orders Cache Cookie
+      - type: string
+        name: etherscanAPIKey
+        label: Etherscan API Key
+      - type: string
+        name: ledgerPath
+        label: Ledger Path
+      - type: list
+        name: bases
+        label: Bases
+        items:
+          type: object
+          fields:
+            - type: string
+              name: addr
+              label: Addr
+            - type: string
+              name: name
+              label: Name
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: int
+      - type: list
+        name: tokens
+        label: Tokens
+        items:
+          type: object
+          fields:
+            - type: markdown
+              name: addr
+              label: Addr
+            - type: string
+              name: name
+              label: Name
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: float
+            - type: image
+              name: logo
+              label: Logo
+      - type: object
+        name: defaultPair
+        label: Default Pair
+        fields:
+          - type: string
+            name: token
+            label: Token
+          - type: string
+            name: base
+            label: Base
+  src:
+    type: data
+    label: Src
+    folder: src
+    fields:
+      - type: object
+        name: general
+        label: General
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: image
+            name: icon
+            label: Icon
+          - type: object
+            name: social
+            label: Social
+            fields:
+              - type: string
+                name: telegram_url
+                label: Telegram Url
+              - type: string
+                name: twitter_url
+                label: Twitter Url
+              - type: string
+                name: github_url
+                label: Github Url
+              - type: string
+                name: facebook_url
+                label: Facebook Url
+              - type: string
+                name: discord_url
+                label: Discord Url
+              - type: string
+                name: reddit_url
+                label: Reddit Url
+              - type: string
+                name: bitcointalk_url
+                label: Bitcointalk Url
+              - type: string
+                name: statedapps_url
+                label: Statedapps Url
+      - type: list
+        name: tokens
+        label: Tokens
+        items:
+          type: object
+          fields:
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: int
+            - type: string
+              name: symbol
+              label: Symbol
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: primaryColor
+              label: Primary Color
+            - type: image
+              name: icon
+              label: Icon
+            - type: object
+              name: addresses
+              label: Addresses
+              fields:
+                - type: string
+                  name: '1'
+                  label: '1'
+                - type: string
+                  name: '3'
+                  label: '3'
+                - type: string
+                  name: '4'
+                  label: '4'
+                - type: string
+                  name: '5'
+                  label: '5'
+                - type: string
+                  name: '42'
+                  label: '42'
+                - type: string
+                  name: '50'
+                  label: '50'
+            - type: string
+              name: id
+              label: Id
+            - type: number
+              name: unified_cryptoasset_id
+              label: Unified Cryptoasset Id
+              subtype: int
+            - type: number
+              name: displayDecimals
+              label: Display Decimals
+              subtype: int
+            - type: markdown
+              name: description
+              label: Description
+            - type: string
+              name: website
+              label: Website
+            - type: string
+              name: c_id
+              label: C Id
+            - type: boolean
+              name: isStableCoin
+              label: Is Stable Coin
+      - type: list
+        name: pairs
+        label: Pairs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: base
+              label: Base
+            - type: string
+              name: quote
+              label: Quote
+            - type: object
+              name: config
+              label: Config
+              fields:
+                - type: number
+                  name: basePrecision
+                  label: Base Precision
+                  subtype: int
+                - type: number
+                  name: pricePrecision
+                  label: Price Precision
+                  subtype: int
+                - type: number
+                  name: minAmount
+                  label: Min Amount
+                  subtype: float
+      - type: list
+        name: marketFilters
+        label: Market Filters
+        items:
+          type: object
+          fields:
+            - type: string
+              name: text
+              label: Text
+            - type: string
+              name: value
+              label: Value
+      - type: object
+        name: wallets
+        label: Wallets
+        fields:
+          - type: boolean
+            name: metamask
+            label: Metamask
+          - type: boolean
+            name: portis
+            label: Portis
+          - type: boolean
+            name: fortmatic
+            label: Fortmatic
+          - type: boolean
+            name: torus
+            label: Torus
+  data_1:
+    type: data
+    label: Data 1
+    folder: ''
+    fields:
+      - type: object
+        name: compilerOptions
+        label: Compiler Options
+        fields:
+          - type: string
+            name: baseUrl
+            label: Base Url
+          - type: boolean
+            name: importHelpers
+            label: Import Helpers
+          - type: list
+            name: lib
+            label: Lib
+            items:
+              type: string
+          - type: string
+            name: module
+            label: Module
+          - type: string
+            name: moduleResolution
+            label: Module Resolution
+          - type: boolean
+            name: noEmitOnError
+            label: No Emit On Error
+          - type: boolean
+            name: noFallthroughCasesInSwitch
+            label: No Fallthrough Cases In Switch
+          - type: boolean
+            name: noImplicitReturns
+            label: No Implicit Returns
+          - type: boolean
+            name: noUnusedLocals
+            label: No Unused Locals
+          - type: string
+            name: outDir
+            label: Out Dir
+          - type: boolean
+            name: sourceMap
+            label: Source Map
+          - type: boolean
+            name: strict
+            label: Strict
+          - type: string
+            name: target
+            label: Target
+      - type: list
+        name: include
+        label: Include
+        items:
+          type: string
+  object_qesisqw74y:
+    type: object
+    label: Object 1
+    fields: []
+  object_0hupo2c01l:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_6wuqep2fy0:
+    type: object
+    label: Object 3
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ct7ft5mv51:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ilima0pmys:
+    type: object
+    label: Object 5
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_l5c4v3t4f2:
+    type: object
+    label: Object 6
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_1p0roch28l:
+    type: object
+    label: Object 7
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_m4w6sx5cu0:
+    type: object
+    label: Object 8
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_8f0v9gt4f0:
+    type: object
+    label: Object 9
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_aygh2qmekr:
+    type: object
+    label: Object 10
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_uxg540bywd:
+    type: object
+    label: Object 11
+    fields:
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_qesisqw74y
+            - object_0hupo2c01l
+            - object_6wuqep2fy0
+            - object_ct7ft5mv51
+            - object_ilima0pmys
+            - object_l5c4v3t4f2
+            - object_1p0roch28l
+            - object_m4w6sx5cu0
+            - object_8f0v9gt4f0
+            - object_aygh2qmekr
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_xw5ces5zg0:
+    type: object
+    label: Object 12
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_tmauex24vd:
+    type: object
+    label: Object 13
+    fields: []
+  object_ivdnqah3hy:
+    type: object
+    label: Object 14
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_u0rdjtubkr:
+    type: object
+    label: Object 15
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_m0wks32hcx:
+    type: object
+    label: Object 16
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_nwtu8l4avh:
+    type: object
+    label: Object 17
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_t99jn6sknq:
+    type: object
+    label: Object 18
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_hstbbw3vdv:
+    type: object
+    label: Object 19
+    fields: []
+  object_9ps00dselb:
+    type: object
+    label: Object 20
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_uto1l63t09:
+    type: object
+    label: Object 21
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_hg6pklcov8:
+    type: object
+    label: Object 22
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_dd70wlbfoc:
+    type: object
+    label: Object 23
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ir42fteghz:
+    type: object
+    label: Object 24
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_cq3vuzwqmf:
+    type: object
+    label: Object 25
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ppy1qsy28h:
+    type: object
+    label: Object 26
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_2cn9g01m5w:
+    type: object
+    label: Object 27
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_b2wyrs91rc:
+    type: object
+    label: Object 28
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_v7ea8fk7v7:
+    type: object
+    label: Object 29
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_5gsjdhrx74:
+    type: object
+    label: Object 30
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_xvl2uq8052:
+    type: object
+    label: Object 31
+    fields:
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_tmauex24vd
+            - object_ivdnqah3hy
+            - object_u0rdjtubkr
+            - object_m0wks32hcx
+            - object_nwtu8l4avh
+            - object_t99jn6sknq
+            - object_uto1l63t09
+            - object_hg6pklcov8
+            - object_dd70wlbfoc
+            - object_ir42fteghz
+            - object_ppy1qsy28h
+            - object_2cn9g01m5w
+            - object_b2wyrs91rc
+            - object_5gsjdhrx74
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_hstbbw3vdv
+            - object_9ps00dselb
+            - object_cq3vuzwqmf
+            - object_v7ea8fk7v7
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_jde12v4e46:
+    type: object
+    label: Object 32
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_1qnfqyhc9v:
+    type: object
+    label: Object 33
+    fields: []
+  object_meknhzydmj:
+    type: object
+    label: Object 34
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_7s9mqt7pt5:
+    type: object
+    label: Object 35
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_1x293s2ijj:
+    type: object
+    label: Object 36
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_nyrmrusdr9:
+    type: object
+    label: Object 37
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_me0m2o3kjb:
+    type: object
+    label: Object 38
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_e3rvhd5mac:
+    type: object
+    label: Object 39
+    fields:
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_1qnfqyhc9v
+            - object_meknhzydmj
+            - object_7s9mqt7pt5
+            - object_1x293s2ijj
+            - object_nyrmrusdr9
+            - object_me0m2o3kjb
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_7xubn655uw:
+    type: object
+    label: Object 40
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ozyv1spd5q:
+    type: object
+    label: Object 41
+    fields: []
+  object_u5tq8xue5l:
+    type: object
+    label: Object 42
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_4q5q4fewil:
+    type: object
+    label: Object 43
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_lu85613qis:
+    type: object
+    label: Object 44
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_c5jz54sv8s:
+    type: object
+    label: Object 45
+    fields: []
+  object_kbqa17jdc3:
+    type: object
+    label: Object 46
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_qykr8vfqnz:
+    type: object
+    label: Object 47
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_fpm4j40r35:
+    type: object
+    label: Object 48
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_0j7rpcdqpc:
+    type: object
+    label: Object 49
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_vtlim764oy:
+    type: object
+    label: Object 50
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: unit
+        label: Unit
+  object_73wtoptv5i:
+    type: object
+    label: Object 51
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_xmzoyqvweq:
+    type: object
+    label: Object 52
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_lran6hwdbz:
+    type: object
+    label: Object 53
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_t4qllyxub5:
+    type: object
+    label: Object 54
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_84s5rjv9va:
+    type: object
+    label: Object 55
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_w7e0h0ycul:
+    type: object
+    label: Object 56
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_ifjkrjx3ah:
+    type: object
+    label: Object 57
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_hinrg99ewr:
+    type: object
+    label: Object 58
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_1okfr07j4t:
+    type: object
+    label: Object 59
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_xjvcvsy2hm:
+    type: object
+    label: Object 60
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_n9xi1gf76a:
+    type: object
+    label: Object 61
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_5qk9ufanhn:
+    type: object
+    label: Object 62
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_j9ft6gxx2y:
+    type: object
+    label: Object 63
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_vyx2ongvxg:
+    type: object
+    label: Object 64
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_ozyv1spd5q
+            - object_u5tq8xue5l
+            - object_4q5q4fewil
+            - object_lu85613qis
+            - object_qykr8vfqnz
+            - object_fpm4j40r35
+            - object_0j7rpcdqpc
+            - object_vtlim764oy
+            - object_73wtoptv5i
+            - object_xmzoyqvweq
+            - object_t4qllyxub5
+            - object_w7e0h0ycul
+            - object_hinrg99ewr
+            - object_xjvcvsy2hm
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_c5jz54sv8s
+            - object_kbqa17jdc3
+            - object_lran6hwdbz
+            - object_84s5rjv9va
+            - object_ifjkrjx3ah
+            - object_1okfr07j4t
+            - object_n9xi1gf76a
+            - object_5qk9ufanhn
+            - object_j9ft6gxx2y
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: type
+        label: Type
+      - type: number
+        name: gas
+        label: Gas
+        subtype: int
+  object_0hjnr2d2sc:
+    type: object
+    label: Object 65
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: type
+              label: Type
+            - type: string
+              name: name
+              label: Name
+            - type: boolean
+              name: indexed
+              label: Indexed
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: string
+        name: type
+        label: Type
+  object_m5q6r9ew2n:
+    type: object
+    label: Object 66
+    fields: []
+  object_bys1aj3p06:
+    type: object
+    label: Object 67
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_2xsme28m7r:
+    type: object
+    label: Object 68
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ombirz6viq:
+    type: object
+    label: Object 69
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_810mqz8beq:
+    type: object
+    label: Object 70
+    fields: []
+  object_s12lushng2:
+    type: object
+    label: Object 71
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_89ph3efjy5:
+    type: object
+    label: Object 72
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_vynxh7kx7f:
+    type: object
+    label: Object 73
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_l3ckzy1rks:
+    type: object
+    label: Object 74
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_qdubs3wyro:
+    type: object
+    label: Object 75
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_pek07x189n:
+    type: object
+    label: Object 76
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_mpxuxsotpf:
+    type: object
+    label: Object 77
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_wb2egiatvx:
+    type: object
+    label: Object 78
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_trve5wfl0j:
+    type: object
+    label: Object 79
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_nxe75hvrxp:
+    type: object
+    label: Object 80
+    fields:
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_m5q6r9ew2n
+            - object_bys1aj3p06
+            - object_2xsme28m7r
+            - object_ombirz6viq
+            - object_vynxh7kx7f
+            - object_pek07x189n
+            - object_wb2egiatvx
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_810mqz8beq
+            - object_s12lushng2
+            - object_89ph3efjy5
+            - object_l3ckzy1rks
+            - object_qdubs3wyro
+            - object_mpxuxsotpf
+            - object_trve5wfl0j
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_f37tay22wr:
+    type: object
+    label: Object 81
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_2udkxyr6yx:
+    type: object
+    label: Object 82
+    fields: []
+  object_zols6u7d22:
+    type: object
+    label: Object 83
+    fields:
+      - type: list
+        name: components
+        label: Components
+        items:
+          type: object
+          fields:
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_jkmagob91h:
+    type: object
+    label: Object 84
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_apl359a5xu:
+    type: object
+    label: Object 85
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_hm04x52fma:
+    type: object
+    label: Object 86
+    fields: []
+  object_ckb5xl9wqt:
+    type: object
+    label: Object 87
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_z8pjsogm70:
+    type: object
+    label: Object 88
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_q1moia1nl6:
+    type: object
+    label: Object 89
+    fields: []
+  object_yqr5wayv4r:
+    type: object
+    label: Object 90
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_23hcvzhm1n:
+    type: object
+    label: Object 91
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_6rxkn3gjua:
+    type: object
+    label: Object 92
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_yu4fw8qcyb:
+    type: object
+    label: Object 93
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_21w7g27fnj:
+    type: object
+    label: Object 94
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_931ptv3s1u:
+    type: object
+    label: Object 95
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_h0gc6mr691:
+    type: object
+    label: Object 96
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_edi5wubo4u:
+    type: object
+    label: Object 97
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_xjk5sgk8te:
+    type: object
+    label: Object 98
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_7eemj8n3mr:
+    type: object
+    label: Object 99
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_314da0ulud:
+    type: object
+    label: Object 100
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_yt6w5h8ebn:
+    type: object
+    label: Object 101
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_lhwlp5ftq2:
+    type: object
+    label: Object 102
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_v79bvo896y:
+    type: object
+    label: Object 103
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_cpzsw6if22:
+    type: object
+    label: Object 104
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_fdndcbcr4g:
+    type: object
+    label: Object 105
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_n7n4uwnpix:
+    type: object
+    label: Object 106
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_yqmz7d1ler:
+    type: object
+    label: Object 107
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_h20r7vsa43:
+    type: object
+    label: Object 108
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_ymidtiuy0y:
+    type: object
+    label: Object 109
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_ddoicfkd9u:
+    type: object
+    label: Object 110
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_ww7v479cli:
+    type: object
+    label: Object 111
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_thri2ckvkt:
+    type: object
+    label: Object 112
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_ashaafrmgq:
+    type: object
+    label: Object 113
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_qicepredrn:
+    type: object
+    label: Object 114
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_zqexbqzg74:
+    type: object
+    label: Object 115
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_kg84k2r38o:
+    type: object
+    label: Object 116
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_98l4wrfmgl:
+    type: object
+    label: Object 117
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_kiiuxc8enw:
+    type: object
+    label: Object 118
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_xckhhmg69o:
+    type: object
+    label: Object 119
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_3v2qb5gti9:
+    type: object
+    label: Object 120
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_bxu67kvrpd:
+    type: object
+    label: Object 121
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_s9qfkzx7rb:
+    type: object
+    label: Object 122
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_x02cgng2if:
+    type: object
+    label: Object 123
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_pfsxzli15i:
+    type: object
+    label: Object 124
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_hglbbq18hi:
+    type: object
+    label: Object 125
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_djlr9gkvig:
+    type: object
+    label: Object 126
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_0vjnjdhmx0:
+    type: object
+    label: Object 127
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_mxbewwvdap:
+    type: object
+    label: Object 128
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_q1dv2fp101:
+    type: object
+    label: Object 129
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_3q943ftvtt:
+    type: object
+    label: Object 130
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_symx07codh:
+    type: object
+    label: Object 131
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_gpybjzzjci:
+    type: object
+    label: Object 132
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_rx3znvalow:
+    type: object
+    label: Object 133
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_bvl3n1wbo6:
+    type: object
+    label: Object 134
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_khtvz8dknh:
+    type: object
+    label: Object 135
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_ms3v4cmokq:
+    type: object
+    label: Object 136
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_sf80pncwpd:
+    type: object
+    label: Object 137
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_3rwjov4e0u:
+    type: object
+    label: Object 138
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_qapbxxqhzc:
+    type: object
+    label: Object 139
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_nbp2snvku3:
+    type: object
+    label: Object 140
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_ovt0hl7zd1:
+    type: object
+    label: Object 141
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_cmk7vu86z3:
+    type: object
+    label: Object 142
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_aqscxu7xk5:
+    type: object
+    label: Object 143
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_pzc002wd2v:
+    type: object
+    label: Object 144
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_ac1boyrd2o:
+    type: object
+    label: Object 145
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_i5ochimm6w:
+    type: object
+    label: Object 146
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_0uyf5xln9c:
+    type: object
+    label: Object 147
+    fields:
+      - type: markdown
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_hm04x52fma
+            - object_ckb5xl9wqt
+            - object_z8pjsogm70
+            - object_23hcvzhm1n
+            - object_yu4fw8qcyb
+            - object_931ptv3s1u
+            - object_edi5wubo4u
+            - object_7eemj8n3mr
+            - object_yt6w5h8ebn
+            - object_v79bvo896y
+            - object_fdndcbcr4g
+            - object_yqmz7d1ler
+            - object_ymidtiuy0y
+            - object_ww7v479cli
+            - object_ashaafrmgq
+            - object_zqexbqzg74
+            - object_98l4wrfmgl
+            - object_xckhhmg69o
+            - object_bxu67kvrpd
+            - object_x02cgng2if
+            - object_hglbbq18hi
+            - object_0vjnjdhmx0
+            - object_q1dv2fp101
+            - object_symx07codh
+            - object_gpybjzzjci
+            - object_rx3znvalow
+            - object_khtvz8dknh
+            - object_sf80pncwpd
+            - object_qapbxxqhzc
+            - object_ovt0hl7zd1
+            - object_aqscxu7xk5
+            - object_pzc002wd2v
+            - object_ac1boyrd2o
+            - object_i5ochimm6w
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_q1moia1nl6
+            - object_yqr5wayv4r
+            - object_6rxkn3gjua
+            - object_21w7g27fnj
+            - object_h0gc6mr691
+            - object_xjk5sgk8te
+            - object_314da0ulud
+            - object_lhwlp5ftq2
+            - object_cpzsw6if22
+            - object_n7n4uwnpix
+            - object_h20r7vsa43
+            - object_ddoicfkd9u
+            - object_thri2ckvkt
+            - object_qicepredrn
+            - object_kg84k2r38o
+            - object_kiiuxc8enw
+            - object_3v2qb5gti9
+            - object_s9qfkzx7rb
+            - object_pfsxzli15i
+            - object_djlr9gkvig
+            - object_mxbewwvdap
+            - object_3q943ftvtt
+            - object_bvl3n1wbo6
+            - object_ms3v4cmokq
+            - object_3rwjov4e0u
+            - object_nbp2snvku3
+            - object_cmk7vu86z3
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: type
+        label: Type
+  object_qidledgdma:
+    type: object
+    label: Object 148
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: type
+              label: Type
+            - type: string
+              name: name
+              label: Name
+            - type: boolean
+              name: indexed
+              label: Indexed
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: string
+        name: type
+        label: Type
+  object_9kuzwcuxgn:
+    type: object
+    label: Object 149
+    fields: []
+  object_q02coqboas:
+    type: object
+    label: Object 150
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_qrjkij9t4a:
+    type: object
+    label: Object 151
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_cv9k5aoqgo:
+    type: object
+    label: Object 152
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_pvnn8c487v:
+    type: object
+    label: Object 153
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_clui7leumz:
+    type: object
+    label: Object 154
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_xes9xuctz7:
+    type: object
+    label: Object 155
+    fields: []
+  object_qpfg4p8t6m:
+    type: object
+    label: Object 156
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_45o7rb4i36:
+    type: object
+    label: Object 157
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_d2k9z8bcat:
+    type: object
+    label: Object 158
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_9kuzwcuxgn
+            - object_q02coqboas
+            - object_qrjkij9t4a
+            - object_cv9k5aoqgo
+            - object_pvnn8c487v
+            - object_clui7leumz
+            - object_45o7rb4i36
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_xes9xuctz7
+            - object_qpfg4p8t6m
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: type
+        label: Type
+  object_j3g9fzjo6h:
+    type: object
+    label: Object 159
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: type
+              label: Type
+            - type: string
+              name: name
+              label: Name
+            - type: boolean
+              name: indexed
+              label: Indexed
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: string
+        name: type
+        label: Type
