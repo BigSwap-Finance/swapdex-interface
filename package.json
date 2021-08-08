@@ -144,7 +144,7 @@
         "web3": "^1.5.1"
     },
     "scripts": {
-        "start": "nodemon index.js localhost 4000" 
+        "start": "nodemon index.js localhost 4000", 
         "start": "react-scripts start",
         "build": "react-scripts build",           
         "start": "cross-env PORT=3001 react-scripts --max_old_space_size=4096 start",
