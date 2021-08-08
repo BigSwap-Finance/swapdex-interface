@@ -70,7 +70,7 @@
         "0x.js": "^9.2.0", 
         "ajv": "^8.6.2",
         "apollo-client": "^2.6.10",
-        "apollo-boost": "^0.4.9     
+        "apollo-boost": "^0.4.9,     
         "apollo-server": "2.9.7",
         "graphql-tag": "^2.10.1",  
         "node-bin-setup": "^1.0.0",
