@@ -159,7 +159,7 @@
         "coveralls": "cat ./coverage/lcov.info | coveralls"
     },
     "eslintConfig": {
-    "extends": "react-app",
+    "extends": "react-app"
    
     },
     "jest": {
