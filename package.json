@@ -1,7 +1,7 @@
 {
     "name": "swapdex",
     "version": "0.3.0",
-    "private": true,
+    "private": true
     "dependencies": {
         "@0x/asset-buyer": "^6.1.14",
         "@0x/asset-swapper": "^16.24.0",        
